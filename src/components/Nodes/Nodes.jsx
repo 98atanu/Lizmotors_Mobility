@@ -13,7 +13,7 @@ const initialNodes = [
     id: "b1a",
     type: "customNode",
     sourcePosition: "right",
-    data: { label: "Research", color: "#294494" },
+    data: { label: "Research", color: "#655DFC" },
     position: { x: 0, y: 150 },
   },
   {
@@ -21,7 +21,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "External", color: "#294494" },
+    data: { label: "External", color: "#655DFC" },
     position: { x: 250, y: 110 },
   },
   {
@@ -29,7 +29,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "Internal", color: "#294494" },
+    data: { label: "Internal", color: "#655DFC" },
     position: { x: 250, y: 190 },
   },
   {
@@ -37,7 +37,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "B2C", color: "#294494" },
+    data: { label: "B2C", color: "#655DFC" },
     position: { x: 500, y: 60 },
   },
   {
@@ -45,7 +45,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "B2C", color: "#294494" },
+    data: { label: "B2C", color: "#655DFC" },
     position: { x: 500, y: 140 },
   },
   {
@@ -53,7 +53,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "Online", color: "#294494" },
+    data: { label: "Online", color: "#655DFC" },
     position: { x: 750, y: -50 },
   },
   {
@@ -61,7 +61,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "Interview", color: "#294494" },
+    data: { label: "Interview", color: "#655DFC" },
     position: { x: 750, y: 10 },
   },
   {
@@ -69,7 +69,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "Public Data", color: "#294494" },
+    data: { label: "Public Data", color: "#655DFC" },
     position: { x: 750, y: 70 },
   },
   {
@@ -77,7 +77,7 @@ const initialNodes = [
     type: "customNode",
     sourcePosition: "right",
     targetPosition: "left",
-    data: { label: "Health", color: "#294494" },
+    data: { label: "Health", color: "#655DFC" },
     position: { x: 750, y: 130 },
   },
 

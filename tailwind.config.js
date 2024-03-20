@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily : {
+      Grotesk : ["Hanken Grotesk", "sans-serif"]
+    }
   },
   plugins: [],
 }
