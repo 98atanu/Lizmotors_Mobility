@@ -1,16 +1,18 @@
-import { useEffect, useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import ReactFlow, {
-  MarkerType,
+ 
   useNodesState,
   useEdgesState,
   addEdge,
-  MiniMap,
   Controls,
+  MarkerType,
+  Background,
+  
 } from "reactflow";
 import "reactflow/dist/style.css";
-import initialNodes from "./components/Nodes/Nodes.jsx";
+import {getInitialNodes} from "./components/Nodes/Nodes.jsx";
 import initialEdges from "./components/Edges/Edges.jsx";
-import { ColoredNode } from "./components/colored-node.jsx";
+import { CustomNode } from "./components/CustomNode.jsx";
 
 const edgeOptions = {
   animated: true,
@@ -21,11 +23,15 @@ const edgeOptions = {
   markerEnd: {
     type: MarkerType.ArrowClosed,
   },
+  style: { stroke: "#05474d" }
 };
 
+
+
 const nodeTypes = {
-  coloredNode: ColoredNode,
+  customNode: CustomNode,
 };
+
 
 const connectionLineStyle = {
   stroke: "black",
@@ -35,8 +41,9 @@ const connectionLineStyle = {
 };
 
 export default function Flow() {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, setNodes, onNodesChange] = useNodesState([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  
 
   const onConnect = useCallback(
     (params) =>
@@ -45,17 +52,28 @@ export default function Flow() {
       ),
     []
   );
+  
+  const onElementRemove = useCallback(
+    (elementsToRemove) => {
+      console.log('elementsToRemove', elementsToRemove)
+      const filteredNodes = nodes.filter((node) => !elementsToRemove.find((el) => el.id === node.id));
+      const filteredEdges = edges.filter((edge) => !elementsToRemove.find((el) => el.id === edge.id));
+      setNodes(filteredNodes);
+      setEdges(filteredEdges);
+    },
+    [nodes, edges, setNodes, setEdges]
+  );
 
-  // useEffect(() => {
-  //   setNodes(initialNodes);
-  //   setEdges(initialEdges);
-  // }, [initialNodes, initialEdges]);
+  useEffect(() => {
+    setNodes(getInitialNodes(onElementRemove));
+    setEdges(initialEdges)
+  }, [])
 
   return (
     <div className="w-full h-screen font-semibold font-sans  flex">
       <ReactFlow
-        defaultNodes={nodes}
-        defaultEdges={edges}
+        nodes={nodes}
+        edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
@@ -68,6 +86,7 @@ export default function Flow() {
         connectionLineStyle={connectionLineStyle}
       >
         <Controls />
+        <Background/>
       </ReactFlow>
     </div>
   );
