@@ -22,7 +22,7 @@ export const CustomNode = memo(({ id, data, isConnectable }) => {
   }
 
   return (
-    <div className={`py-2 px-10 rounded-xl min-w-20 relative group shadow-md shadow-slate-900`} style={{backgroundColor: data?.color || '#000000', }}
+    <div  className={`py-2 px-10 rounded-xl min-w-20  group shadow-md shadow-slate-900`} style={{backgroundColor: data?.color || '#000000', }}
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
     >

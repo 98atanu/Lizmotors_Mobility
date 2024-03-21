@@ -112,7 +112,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Designing", color: "#e86443" },
-    position: { x: 0, y: 440 },
+    position: { x: 0, y: 430 },
   },
   {
     id: "o2b",
@@ -120,7 +120,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Hardware", color: "#e86443" },
-    position: { x: 250, y: 400 },
+    position: { x: 250, y: 390 },
   },
   {
     id: "o2c",
@@ -128,7 +128,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Software", color: "#e86443" },
-    position: { x: 250, y: 500 },
+    position: { x: 250, y: 470 },
   },
 
   {
@@ -137,7 +137,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Manufacturing", color: "#e8909c" },
-    position: { x: 0, y: 600 },
+    position: { x: 0, y: 570 },
   },
   {
     id: "p2b",
@@ -145,7 +145,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Material", color: "#e8909c" },
-    position: { x: 250, y: 550 },
+    position: { x: 250, y: 530 },
   },
   {
     id: "p2c",
@@ -153,7 +153,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Production", color: "#e8909c" },
-    position: { x: 250, y: 650 },
+    position: { x: 250, y: 610 },
   },
 
   {
@@ -162,7 +162,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Sales/Marketing", color: "#a683eb" },
-    position: { x: 0, y: 750 },
+    position: { x: 0, y: 710 },
   },
   {
     id: "v2b",
@@ -170,7 +170,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Online", color: "#a683eb" },
-    position: { x: 250, y: 720 },
+    position: { x: 250, y: 670 },
   },
   {
     id: "v2c",
@@ -178,7 +178,7 @@ const initialNodes = [
     sourcePosition: "right",
     targetPosition: "left",
     data: { label: "Dealership", color: "#a683eb" },
-    position: { x: 250, y: 800 },
+    position: { x: 250, y: 750 },
   },
 ];
 
