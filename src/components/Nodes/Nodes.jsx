@@ -13,6 +13,7 @@ const initialNodes = [
     id: "b1a",
     type: "customNode",
     sourcePosition: "right",
+    targetPosition: "left",
     data: { label: "Research", color: "#655DFC" },
     position: { x: 0, y: 150 },
   },
