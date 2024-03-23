@@ -8,12 +8,12 @@ import ReactFlow, {
   Controls,
   MarkerType,
   Background,
-  
 } from "reactflow";
 import "reactflow/dist/style.css";
 import { getInitialNodes } from "./components/Nodes/Nodes.jsx";
 import initialEdges from "./components/Edges/Edges.jsx";
 import { CustomNode } from "./components/Nodes/CustomNode.jsx";
+import { BlankNode } from "./components/Nodes/BlankNode.jsx";
 
 const edgeOptions = {
   animated: true,
@@ -25,6 +25,7 @@ const edgeOptions = {
 
 const nodeTypes = {
   customNode: CustomNode,
+  blankNode: BlankNode,
 };
 
 const connectionLineStyle = {
@@ -57,8 +58,10 @@ export default function Flow() {
   );
 
   const onEdgeUpdate = useCallback(
-    (edge, newConnection) => setEdges((els) => updateEdge(edge, newConnection, els)),
-    []);
+    (edge, newConnection) =>
+      setEdges((els) => updateEdge(edge, newConnection, els)),
+    []
+  );
 
   useEffect(() => {
     setNodes(getInitialNodes(onElementRemove));
@@ -72,24 +75,21 @@ export default function Flow() {
     );
   });
 
-  const addNode = useCallback(
-    (label, position, color) => {
-      setNodes((prevNodes) => {
-        const newNode = {
-          id: uuidv4(),
-          type: "customNode",
-          sourcePosition: "right",
-          targetPosition: "left",
-          data: { label, color, onElementRemove },
-          position,
-        };
-        console.log("prevNode", prevNodes);
-        console.log("newNode", newNode);
-        return [...prevNodes, newNode];
-      });
-    },
-    []
-  );
+  const addNode = useCallback((label, position, color) => {
+    setNodes((prevNodes) => {
+      const newNode = {
+        id: uuidv4(),
+        type: "customNode",
+        sourcePosition: "right",
+        targetPosition: "left",
+        data: { label, color, onElementRemove },
+        position,
+      };
+      console.log("prevNode", prevNodes);
+      console.log("newNode", newNode);
+      return [...prevNodes, newNode];
+    });
+  }, []);
 
   const handleNodeDoubleClick = useCallback(
     (event, node) => {

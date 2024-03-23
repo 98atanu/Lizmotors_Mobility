@@ -1,5 +1,11 @@
 
 const initialEdge =  [
+    { id: 'b0',  source: 'blnk0', target: 'b1a', },
+    { id: 'b1',  source: 'blnk0', target: 's1a', },
+    { id: 'b2',  source: 'blnk0', target: 'o1a', },
+    { id: 'b3',  source: 'blnk0', target: 'p1a', },
+    { id: 'b4',  source: 'blnk0', target: 'v1a', },
+
     { id: 'e0',  source: 'b1a', target: 'b2b', },
     { id: 'e1',  source: 'b1a', target: 'b2c', },
     { id: 'e2',  source: 'b2b', target: 'b3d', },
@@ -12,15 +18,12 @@ const initialEdge =  [
     { id: 'f0', source: 's1a', target: 's2b', },
     { id: 'f1', source: 's1a', target: 's2c', },
 
-
     { id: 'g0' ,source: 'o1a', target: 'o2b', },
     { id: 'g1' ,source: 'o1a', target: 'o2c', },
-
 
     { id: 'h0' ,source: 'p1a', target: 'p2b', },
     { id: 'h1' ,source: 'p1a', target: 'p2c', },
  
-
     { id: 'i0' ,source: 'v1a', target: 'v2b', },
     { id: 'i1' ,source: 'v1a', target: 'v2c', },
 ];

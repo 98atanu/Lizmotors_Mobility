@@ -10,6 +10,13 @@ export const getInitialNodes = (onElementRemove) => {
 
 const initialNodes = [
   {
+    id: "blnk0",
+    type: "blankNode",
+    sourcePosition: "right",
+    data: { label: null, color: "Connecting" },
+    position: { x: -230, y: 432 },
+  },
+  {
     id: "b1a",
     type: "customNode",
     sourcePosition: "right",
